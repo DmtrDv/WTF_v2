@@ -9,7 +9,7 @@ namespace LibraryForWTF_v2
 {
     public class TestStreamWriter
     {
-        public List<int> NubsToMassive(string NumberToMassive)
+        /*public List<int> NubsToMassive(string NumberToMassive)
         {
             string[] stringMas = NumberToMassive.Split(',');
             List<int> intMas = new List<int>();
@@ -18,7 +18,7 @@ namespace LibraryForWTF_v2
                 intMas.Add(int.Parse(stringMas[i]));
             }
             return intMas;
-        }
+        }*/
         public storage NecessaryQuestions(string PartPathToListQuestions, List<int> NubsQuestions, storage NecessaryQuestions)
         {
             string PathToListQuestion = $"FolderLists\\{PartPathToListQuestions}\\{PartPathToListQuestions}.txt";
@@ -34,7 +34,7 @@ namespace LibraryForWTF_v2
                 {
                     if (i == NubsQuestions[index])
                     {
-                        NecessaryQuestions.AddNecessaryQuestion(AlreadyReadStrings[i - 1] + "\n");
+                        NecessaryQuestions.AddNecessaryQuestion(AlreadyReadStrings[i] + "\n");
                         index++;
                     }
                 }
@@ -84,7 +84,7 @@ namespace LibraryForWTF_v2
                 else
                 {
                     SplittingIntoParts = ListQuestion[i].Split('~');
-                    recordable += "\n" + SplittingIntoParts[0] + " Правильный ответ: " + SplittingIntoParts[1] + "\n";
+                    recordable += "\n" + SplittingIntoParts[0] + "\n" + " Правильный ответ: " + SplittingIntoParts[1] + "\n";
                 }
             }
             using (StreamWriter writer = new StreamWriter(PathToSaveTest, true))
