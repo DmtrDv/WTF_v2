@@ -120,6 +120,7 @@ namespace WTF_v2
 
             resultForm FormRes = new resultForm(recordForSt, recordForTch);
             FormRes.ShowDialog();
+            
         }
         private bool StringIsSpaces(string str)
         {
@@ -139,6 +140,8 @@ namespace WTF_v2
             ListDisciplines_comboBox.Text = "";
             ListQuestions_checkedListBox.Items.Clear();
             NameTest_textBox.Text = "";
+            /*resultForm openResultForm = Application.OpenForms.OfType<resultForm>().FirstOrDefault();
+            openResultForm?.ClearResults();*/
         }
     }
 }
